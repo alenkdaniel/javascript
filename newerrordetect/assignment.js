@@ -57,12 +57,16 @@ console.log("Age in 5 years:", age);
 
 let students = [
   { name: "Alice", grade: 85 },
-  { name: "Bob", grade: 70 },
+  { name: "Bob", grade: "A" },
   { name: "Charlie", grade: 92 }
 ];
 
-  if(students.grade >= 90) {
-    console.log(students.name + " has an A grade.");
+for (let student of students) {
+
+  if(student.grade >= 90) {
+    console.log(student.name + " has an A grade.");
   }
+}
+    
 
 console.log("End of the code");
