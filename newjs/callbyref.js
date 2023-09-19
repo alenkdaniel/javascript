@@ -44,6 +44,11 @@ let result=fa();
 console.log("result1:" , result);
 
 console.log("result1:" , result());
+
+setTimeout(function(){
+    console.log("a")
+},10000);
+
  
 
 

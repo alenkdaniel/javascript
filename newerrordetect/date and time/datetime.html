@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Time</h1>
+    <span id="time"></span>
+    <script>
+        function putzero(sec){
+            return sec<10?"0"+sec:sec;
+
+        }
+        function show(){
+            var time=document.getElementById("time");
+            var dt=new Date();
+            var hours=dt.getHours()
+            var ampm=hours>12?"pm":"am";
+            time.innerHTML=putzero(hours%12)+":"+putzero(dt.getMinutes())+":"+putzero(dt.getSeconds())+ampm;
+            setTimeout(function(){
+                show();
+            },1000);
+        }
+        show();
+        var obj={a:1,b:2,c:3};
+        var obj1={...obj};
+        console.log(obj);
+        console.log(obj1);
+        var arr=[1,2,3];
+        var arr1=[...arr];
+        console.log(arr);
+        console.log(arr1);
+
+        const obj2={name:"appu",age:21,std:"10th"};
+        
+        console.log(name,age,std);
+      
+        var {name , age , std}=obj2;
+        console.log(name , age , std);
+
+
+        var arr3=[10,20,30];
+        var[a,b,c]=arr3;
+        console.log(a,b,c);
+
+        var obj5={
+            name:"SYNNEFO",
+            palce:"kochin"
+            rank:100
+
+        }
+        Function myFunction{[name,place]}){
+            console.log(name,place);
+        }
+        myFunction(obj5);
+
+
+    </script>
+</body>
+</html>
